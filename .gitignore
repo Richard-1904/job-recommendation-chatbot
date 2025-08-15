@@ -1,0 +1,20 @@
+#Virtual Environment
+.venv/
+__pycache__/
+
+#Large model/data files
+*.pth
+*.pkl
+*.csv
+*.png
+*.jpg
+*.pptx
+
+#Temporary/test folders
+runs/
+TEST/
+
+#Python files
+image.py
+mistral_test.py
+test.py
