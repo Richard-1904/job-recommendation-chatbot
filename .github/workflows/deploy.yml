@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3   # Checkout your repo
       - name: Push to Hugging Face Space
         run: |
-          git config --global user.email "u2203179@rajagiri.edu.in"
+          git config --global user.email "tsaburichard@gmail.com"
           git config --global user.name "Richard-1904"
           git remote add space https://huggingface.co/spaces/richard16/job-recommendation-chatbot
           git push https://huggingface.co/${{ secrets.HF_TOKEN }}@huggingface.co/spaces/richard16/job-recommendation-chatbot main --force
