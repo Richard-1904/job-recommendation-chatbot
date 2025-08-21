@@ -1,12 +1,12 @@
 # **NLP-Driven Job Recommendation Chatbot**  
 ## **📌 Overview**  
-This project is an **AI-powered job recommendation chatbot** developed during my internship at **Cochin University of Science and Technology (CUSAT)** under the guidance of **Dr. Jeena Kleenankandy** as part of the **IEEE CIS Kerala Section Summer Internship 2025**.  
+This project is an **NLP_Driven Job Recommendation Chatbot** developed during my internship at **Cochin University of Science and Technology (CUSAT)** under the guidance of **Dr. Jeena Kleenankandy** as part of the **IEEE CIS Kerala Section Summer Internship 2025**.  
 
-The chatbot interacts with users through a dynamic, conversational interface, collects their profile details, and predicts the most suitable job role using a **hybrid NLP + Machine Learning model**.  
+The chatbot interacts with users through a dynamic, conversational interface, collects their profile details, and predicts the most suitable job role using a **Hybrid NLP + Machine Learning model**.  
 
 ---
 ## **✨ Features**  
-- **Dynamic Question Flow** – Uses the **Mistral LLM** to generate context-aware questions.  
+- **Integration with Hugging Face Inference API (LLaMA 3.1)** – Uses the **LLaMa LLM** to generate context-aware questions.  
 - **Hybrid NLP Model** – Combines **TF-IDF vectorization** and **SentenceTransformer embeddings** for accurate predictions.  
 - **PyTorch Classifier** – A neural network model trained on job posting data.  
 - **Interactive Interface** – Built using **Gradio** for real-time chatbot interaction.  
@@ -26,7 +26,7 @@ The chatbot interacts with users through a dynamic, conversational interface, co
 ### **NLP & AI Tools**  
 - TF-IDF Vectorizer  
 - Sentence Embeddings (`all-mpnet-base-v2`)  
-- Mistral LLM (local API integration)  
+- LLaMa LLM 
 
 ---
 
@@ -73,4 +73,8 @@ python app.py
 2. Dynamic Questioning – The Mistral LLM adapts its next question based on previous answers.  
 3. Profile Processing – Responses are converted into numerical vectors using TF-IDF and sentence embeddings.  
 4. Prediction – The trained PyTorch model predicts the most suitable job title.  
+<<<<<<< HEAD
 5. Result Display – The chatbot shows the predicted job and logs the session.  
+=======
+5. Result Display – The chatbot shows the predicted job and logs the session.  
+>>>>>>> 722e24c (Updated app.py)
