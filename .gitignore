@@ -1,6 +1,7 @@
 #Virtual Environment
 .venv/
 __pycache__/
+.env
 
 #Large model/data files
 *.pth
