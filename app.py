@@ -4,15 +4,22 @@ import os
 from gradio.themes.soft import Soft
 from model import load_model, predict_job_title
 from profile_builder import ProfileBuilder
-import requests
+from openai import OpenAI
 
-def llm(prompt):
-    response = requests.post("http://localhost:11434/api/generate", json={
-        "model": "mistral", 
-        "prompt": prompt,
-        "stream": False
-    })
-    return response.json()["response"]
+client = OpenAI(
+    base_url="https://router.huggingface.co/v1",
+    api_key=os.getenv("HF_TOKEN")
+)
+
+def llm(prompt: str) -> str:
+    response = client.chat.completions.create(
+        model="meta-llama/Llama-3.1-8B-Instruct:fireworks-ai",
+        messages=[{"role": "system", "content": "You are a helpful assistant that asks polite, short questions to understand a user's background for job recommendations."},
+                  {"role": "user", "content": prompt}],
+        max_tokens=150,
+        temperature=0.7,
+    )
+    return response.choices[0].message.content.strip()
 
 builder = ProfileBuilder(use_llm=True,llm=llm)
 model, embedder, label_encoder, cluster_to_label, scaler, vectorizer = load_model()
