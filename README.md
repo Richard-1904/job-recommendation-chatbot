@@ -77,4 +77,3 @@ python app.py
 5. Result Display – The chatbot shows the predicted job and logs the session.  
 =======
 5. Result Display – The chatbot shows the predicted job and logs the session.  
->>>>>>> 722e24c (Updated app.py)
